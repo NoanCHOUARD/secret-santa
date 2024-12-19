@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="w-full mx-auto bg-linear-45 from-primaryone to-primarytwo font-displaytwo">
+    <div className="w-full mx-auto bg-linear-45 from-primaryone to-primarytwo font-displaytwo py-5">
       <div className=" min-h-screen flex flex-col gap-5 justify-center items-center">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
@@ -70,8 +70,8 @@ export default function App() {
               onRemoveParticipant={removeParticipant}
             />
             <div className="mt-6">
-              <button className="bg-white p-2 rounded-full shadow-2xl text-primaryone hover:text-secondaryone font-display" onClick={distributeGifts}>
-                Distribuer les cadeaux
+              <button className="w-max shadow-2xl rounded-3xl button text-lg font-display border-2 border-white bg-white px-8 py-3 hover:border-secondaryone hover:text-secondaryone inline-block text-transparent bg-clip-text transition-all hover:scale-105" onClick={distributeGifts}>
+                Distribution des cadeaux !
               </button>
             </div>
           </>
@@ -80,14 +80,14 @@ export default function App() {
         {currentScreen === "assignments" && (
           <>
           <div className="flex items-center justify-center p-2 bg-white rounded-xl shadow-2xl">
-            <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-primaryone to-primarytwo inline-block text-transparent bg-clip-text sm:hidden md:block font-display">
+            <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-primaryone to-primarytwo inline-block text-transparent bg-clip-text sm:hidden md:block font-display">
               Attributions des cadeaux
             </h2>
             </div>
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
-              <button className="w-max shadow-2xl rounded-3xl button text-lg font-display bg-white px-8 py-3" onClick={resetApp}>
-                <p className="bg-gradient-to-r from-primaryone to-primarytwo inline-block text-transparent bg-clip-text">Recommencer</p>
+              <button className="w-max shadow-2xl rounded-3xl button text-lg text-primaryone font-display bg-white hover:bg-secondaryone hover:scale-105 transition-all px-8 py-3" onClick={resetApp}>
+                Recommencer
               </button>
             </div>
           </>

@@ -18,17 +18,20 @@
     border-color: var(--color-gray-200, currentColor);
   }
 
-  :root{
+  /* :root{
     
         --font-display:'Berkshire Swash', sans-serif ;
         --font-displaytwo: 'Poppins', sans-serif;
 
-  }
+  } */
 
 
 
 }
 @theme {
+
+        --font-display:'Berkshire Swash', sans-serif ;
+        --font-displaytwo: 'Poppins', sans-serif;
     
     --color-primaryone: oklch(66.56% 0.22130540699819437 25.57469539932874);
     --color-primarytwo: oklch(71.16% 0.1812 22.84);

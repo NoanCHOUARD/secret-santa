@@ -27,7 +27,7 @@ export function ParticipantInput({
       <div className="space-y-4 bg-linear-45 from-secondaryone to-secondarytwo shadow-2xl p-4 rounded-3xl">
       {/* // Champs de saisie pour ajouter un participant */}
       <h1 className="text-lg font-display text-white">Ajouter un nom :</h1>
-      <div className="flex items-center space-x-2 bg-linear-45 from-primarytwo to-primaryone shadow-xl p-2 rounded-3xl">
+      <div className="flex items-center space-x-2 bg-linear-45 from-primarytwo to-primaryone shadow-xl p-2 rounded-3xl hover:scale-105 transition-all">
         <input
           type="text"
           className="input text-white/65 h-7 flex-grow font-displaytwo"
@@ -36,7 +36,7 @@ export function ParticipantInput({
           onChange={(e) => setCurrentName(e.target.value)}
           onKeyPress={(e) => e.key === "Enter" && addParticipant()}
         />
-        <button className="bg-secondaryone ease-in-out text-white hover:bg-tertiaryone hover:text-primaryone rounded-full p-2" onClick={addParticipant}>
+        <button className="bg-secondaryone ease-in-out text-white hover:bg-tertiaryone hover:text-primaryone rounded-full p-2 transition-all" onClick={addParticipant}>
           <img src="./img/thumbs-up.svg" alt="" className="w-7 h-auto"/>
         </button>
       </div>
@@ -48,7 +48,7 @@ export function ParticipantInput({
       </div>
     </div>
 
-    <div className="flex flex-col space-y-4 bg-white shadow-2xl p-4 rounded-3xl">
+    <div className="flex flex-col space-y-8 bg-white shadow-2xl p-4 rounded-3xl">
 
       {/* // Liste des participants ajoutés */}
 
@@ -56,23 +56,21 @@ export function ParticipantInput({
 
       <ul className="space-y-2">
         {participants.map((name, index) => (
-          <li className="space-y-2" key={index}>
+          <li className="space-y-2 hover:scale-105 transition-all" key={index}>
 
-          <div className="flex relative justify-between w-full text-white font-displaytwo h-auto bg-linear-45 from-primaryone to-primarytwo shadow-xl p-2 rounded-3xl">
+          <div className="flex relative justify-between items-center w-full text-white font-displaytwo h-auto bg-linear-45 from-primaryone to-primarytwo shadow-xl p-2 rounded-3xl">
 
               {name}
-            <div className="flex items-center justify-center rounded-full bg-linear-45 from-secondaryone to-secondarytwo w-24 h-auto z-10 p-2">
-              <img src="./img/santa.svg" alt=""/>
+            <div className="rounded-full bg-secondaryone p-2">
+              <img src="./img/santa.svg" alt="" className="w-full h-auto"/>
             </div>
-
           </div>
 
           <div className="w-full h-auto flex items-center justify-center space-x-2">
               <button
-                className="bg-gradient-to-r from-primaryone to-primarytwo p-2 rounded-full shadow-2xl text-white hover:text-secondaryone"
+                className="w-max shadow-2xl rounded-xl button text-sm font-display text-primaryone border-2 border-primaryone hover:border-secondaryone px-8 py-3 hover:text-secondaryone inline-block transition-all hover:scale-105"
                 onClick={() => onRemoveParticipant(index)}
-              >
-                <p className="">Supprimer</p>
+              >Supprimer
               </button>
             </div>
 
