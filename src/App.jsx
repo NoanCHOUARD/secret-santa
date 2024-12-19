@@ -51,18 +51,19 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div>
-        // affiche l'écran en fonction de l'état de l'application // WELCOME
+    <div className="w-full h-screen mx-auto p-4 bg-linear-45 from-primaryone to-primarytwo font-displaytwo">
+      <div className="flex flex-col gap-5 justify-center items-center">
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
         // INPUT
         {currentScreen === "input" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+          <div className="flex items-center justify-center w-max shadow-2xl rounded-2xl text-lg font-display bg-white px-8 py-3">
+            <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-primaryone to-primarytwo text-transparent bg-clip-text">
               Ajoutez les participants
             </h2>
+          </div>
             <ParticipantInput
               onAddParticipant={addParticipant}
               participants={participants}

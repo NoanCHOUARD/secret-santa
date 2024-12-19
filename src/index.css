@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -8,6 +10,7 @@
   If we ever want to remove these styles, we need to add an explicit border
   color utility to any element that depends on these defaults.
 */
+
 @layer base {
   *,
   ::after,
@@ -17,3 +20,25 @@
     border-color: var(--color-gray-200, currentColor);
   }
 }
+@theme {
+
+    --font-display:'Berkshire Swash', sans-serif ;
+    --font-displaytwo: 'Poppins', sans-serif;
+    
+    --color-primaryone: oklch(66.56% 0.22130540699819437 25.57469539932874);
+    --color-primarytwo: oklch(71.16% 0.1812 22.84);
+
+    --color-secondaryone: oklch(88.33% 0.15889165196667632 91.45581702891785);
+    --color-secondarytwo: oklch(90.23% 0.13705865918190602 92.26887939218983);
+
+    --color-tertiaryone: oklch(90.21% 0.2181 137.83);
+    --color-tertiarytwo: oklch(91.66% 0.18041912795099085 137.52072877139793);
+
+    --color-quaternaryone: oklch(71.87% 0.1916 49.38);
+    --color-quaternarytwo: oklch(79.45% 0.1708903949654049 71.18809619832997);
+
+
+  
+}
+
+
